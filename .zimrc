@@ -1,0 +1,16 @@
+# define prompt
+# zmodule git-info
+# zmodule prompt-pwd
+# zmodule sorin
+
+# completions
+zmodule zsh-users/zsh-completions --fpath src
+zmodule conda-incubator/conda-zsh-completion
+# zmodule completion  # does not seem to rebuild when new files added. 
+
+# additional plugins
+zmodule zsh-users/zsh-syntax-highlighting
+zmodule zsh-users/zsh-autosuggestions
+
+# load p10k prompt
+zmodule romkatv/powerlevel10k --use degit
