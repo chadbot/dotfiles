@@ -30,7 +30,7 @@ dotfiles checkout
 # Set repo to ignore most files...
 dotfiles config --local status.showUntrackedFiles no
 
-# set upstream branch 
-dotfiles push -u 
+# Set upstream branch 
+dotfiles push -u origin main
 
 echo "Dotfiles installed! Restart shell now to finish."
