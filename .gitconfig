@@ -1,0 +1,23 @@
+[user]
+	email = chad.borkenhagen@gmail.com
+	name = Chad Borkenhagen
+	signingkey = 7B941398
+[core]
+	autocrlf = input
+	safecrlf = true
+	excludesfile = ~/.gitignore
+[color]
+	ui = auto
+[credential]
+	helper = osxkeychain
+[commit]
+	gpgsign = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[pull]
+	rebase = false
+[push]
+	autoSetupRemote = true
