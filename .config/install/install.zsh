@@ -2,7 +2,8 @@
 git clone --bare git@github.com:chadbot/dotfiles.git $HOME/.dotfiles
 
 # Move any existing dotfiles files into backup directory.
-BACKUP_DIR=$HOME/dotfiles_backup
+DATE=`date +"%Y%m%d"`
+BACKUP_DIR=$HOME/dotfiles_backup_$DATE
 if [ -d "$BACKUP_DIR" ];
 then
     echo "Can't backup dotfiles. $BACKUP_DIR directory already exists." 
@@ -28,5 +29,8 @@ dotfiles checkout
 
 # Set repo to ignore most files...
 dotfiles config --local status.showUntrackedFiles no
+
+# set upstream branch 
+dotfiles push -u 
 
 echo "Dotfiles installed! Restart shell now to finish."
