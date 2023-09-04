@@ -35,7 +35,7 @@ dotfiles config --local status.showUntrackedFiles no
 dotfiles push -u origin main
 
 # Download/install fonts.
-echo "Downloading preferred terminal font..."
+echo "Downloading MesloLGS NF font for pretty terminal..."
 cd ~/Library/Fonts && { 
     curl -Os "https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf"
     curl -Os "https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold.ttf"
