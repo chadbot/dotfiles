@@ -77,9 +77,10 @@ fi
 autoload -Uz compinit
 compinit  # -uf
 
-# ---- ALIASES ----
+# ---- ALIASES AND FUNCTIONS ----
 
 source $HOME/.config/zsh/aliases.zsh
+source $HOME/.config/zsh/functions.zsh
 
 # ---- POWERLINE10K ----
 
