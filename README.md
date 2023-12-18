@@ -6,7 +6,7 @@ My basic configuration files. Nothing fancy, but it's convenient.
 
 ### The super simple way
 
-The simplest way to get running quickly is to open a zsh shell and run the following command:
+The simplest way to quickly get up and running is to open a zsh shell and run the following command:
 
 ```
 source <(curl -s https://raw.githubusercontent.com/chadbot/dotfiles/main/.config/install/install.zsh)
@@ -21,7 +21,7 @@ The step-by-step method is also pretty straightforward:
 1. Clone the bare repo to the local machine:
 
 ```bash
-git clone --bare chadbot/dotfiles $HOME/.dotfiles
+git clone --bare https://github.com/chadbot/dotfiles.git $HOME/.dotfiles
 ```
 
 2. Define a `dotfiles` command to easily work with the repo:

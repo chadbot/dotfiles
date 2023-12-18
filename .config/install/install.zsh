@@ -1,6 +1,6 @@
 
 # Clone bare repo.
-git clone --bare git@github.com:chadbot/dotfiles.git $HOME/.dotfiles
+git clone --bare https://github.com/chadbot/dotfiles.git $HOME/.dotfiles
 
 # Move any existing dotfiles files into backup directory.
 DATE=`date +"%Y%m%d"`
