@@ -1,7 +1,4 @@
 
-# Clone bare repo.
-git clone --bare https://github.com/chadbot/dotfiles.git $HOME/.dotfiles
-
 # Move any existing dotfiles files into backup directory.
 DATE=`date +"%Y%m%d"`
 BACKUP_DIR=$HOME/dotfiles_backup_$DATE
@@ -24,6 +21,9 @@ for file in $(git -C $HOME/.dotfiles ls-tree -r --full-name --name-only HEAD)
                 rm $file;
         fi
 done
+
+# Clone bare repo.
+git clone --bare https://github.com/chadbot/dotfiles.git $HOME/.dotfiles
 
 # Define dotfiles alias.
 alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
