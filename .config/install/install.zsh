@@ -28,6 +28,7 @@ for file in $(git -C $DOTFILES_DIR ls-tree -r --full-name --name-only HEAD)
     do 
         if [ -f $file ];
             then
+                echo "Backing up $file to $BACKUP_DIR"
                 rsync -RW $file $BACKUP_DIR
                 rm $file;
         fi
