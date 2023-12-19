@@ -17,9 +17,12 @@ fi
 
 # Copy existing files. Rsync preserves paths.
 for file in $(git -C $HOME/.dotfiles ls-tree -r --full-name --name-only HEAD)
-do 
-    rsync -RW $file $BACKUP_DIR
-    rm $file
+    do 
+        if [ -f $file ];
+            then
+                rsync -RW $file $BACKUP_DIR
+                rm $file;
+        fi
 done
 
 # Define dotfiles alias.
