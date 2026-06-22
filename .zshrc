@@ -39,24 +39,24 @@ fi
 # Initialize modules.
 source ${ZIM_HOME}/init.zsh
 
-# ---- CONDA ----
+# # ---- CONDA ----
 
-# NOTE: modified conda-generated code to use $HOME instead of static paths
+# # NOTE: modified conda-generated code to use $HOME instead of static paths
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('${HOME}/miniconda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "${HOME}/miniconda/etc/profile.d/conda.sh" ]; then
-        . "${HOME}/miniconda/etc/profile.d/conda.sh"
-    else
-        export PATH="${HOME}/miniconda/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
+# # >>> conda initialize >>>
+# # !! Contents within this block are managed by 'conda init' !!
+# __conda_setup="$('${HOME}/miniconda/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     eval "$__conda_setup"
+# else
+#     if [ -f "${HOME}/miniconda/etc/profile.d/conda.sh" ]; then
+#         . "${HOME}/miniconda/etc/profile.d/conda.sh"
+#     else
+#         export PATH="${HOME}/miniconda/bin:$PATH"
+#     fi
+# fi
+# unset __conda_setup
+# # <<< conda initialize <<<
 
 # ---- COMPLETIONS ----
 
@@ -86,3 +86,9 @@ source $HOME/.config/zsh/functions.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f $HOME/.p10k.zsh ]] || source $HOME/.p10k.zsh
+
+# Created by `pipx` on 2025-05-25 22:57:01
+export PATH="$PATH:/Users/chad/.local/bin"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
