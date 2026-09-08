@@ -1,0 +1,5 @@
+# iTerm2 custom-prefs folder: track only the portable settings subset.
+# Ignore local runtime state (AppSupport symlink, Python API sockets, etc.)
+*
+!.gitignore
+!com.googlecode.iterm2.plist
