@@ -44,6 +44,10 @@ dotfiles config --local status.showUntrackedFiles no
 
 That's it. Next time you open a ZSH prompt, it should download ZIM and configure everything automatically.
 
+### One manual step for iTerm
+
+iTerm2 settings are tracked as the portable subset it exports to a custom folder, not the full `~/Library/Preferences` plist. After checkout, open iTerm2 → Settings → General → Preferences, enable **Load preferences from a custom folder**, and point it at `~/.config/iterm2`. iTerm picks up the tracked settings on the next launch.
+
 ## Updating or adding files
 
 Use the `dotfiles` command to add files, commit, and push changes to the repo. For example:
