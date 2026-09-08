@@ -69,7 +69,10 @@ if command -v brew &> /dev/null; then
 fi
 
 # add 1password cli completions, if 1password cli installed
-if command -v op &> /dev/null; then
+# regenerate only when the op binary is newer than the cached completions, so a
+# normal shell start doesn't run `op` (which triggers a macOS "access data from
+# other apps" prompt). Auto-refreshes the first shell after each `op` upgrade.
+if command -v op &> /dev/null && [[ $(command -v op) -nt $HOME/.config/zsh/completions/_op ]]; then
     op completion zsh > $HOME/.config/zsh/completions/_op
 fi
 
